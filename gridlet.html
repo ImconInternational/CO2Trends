@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Gridlet</title>
+			<meta charset="utf-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		    <meta name="apple-mobile-web-app-capable" content="yes">
+		    <meta name="apple-mobile-web-app-status-bar-style" content="black">  
+		</head>
+		
+		<body class="framework7-root layout-null theme-teal">
+			<style type="text/css">
+				@import url("lib/framework7/framework7.material.min.css");
+				@import url("lib/framework7/framework7.material.colors.min.css");
+				@import url("lib/framework7/material-icons.css");
+                @import url("lib/gdr.1.0.0.css");
+			</style>
+			<script type="text/javascript" src="cordova.js"></script>
+   	 		<div class="views">
+   	 			<div class="view main-view">
+   	 				<div class="pages">
+   	 					
+   	 					<!--  Add other pages to this section-->
+   	 					<div class="page navbar-fixed" id="theOtherPage" data-page="otherPage">
+							<div class="navbar">
+								<div class="navbar-inner">
+									<div class="left"><a id="people-btn-back" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+									<div class="center">Other page</div>
+								</div>
+							</div>
+							
+						</div>
+						<!-- end add other pages --> 
+						
+						<!-- do not modify this section -->
+   	 					<div class="page navbar-fixed toolbar-fixed" id="gdrMainPage" data-page="gdrMainPage" data-role="pagePrincipale">
+   	 						<div class="navbar">
+								<div class="navbar-inner">
+									<div class="center">GDR</span></div>
+									<div class="right">
+										<a id="gdrUserMenuBtn" class="link"><i class="material-icons">person</i></a>
+										<a id="gdSyncAllBtn" href="#" class="link"><i class="material-icons">sync</i></a>
+										<a href="#" data-popover="#myPopup" class="link open-popover">
+											<i class="icon material-icons">more_vert</i>
+										</a>
+									</div>
+								</div>
+							</div>
+							
+							<div id="gdrMainToolbar1" class="toolbar tabbar gd-zero-box-shadow gdr-main-toolbar gdr-app-name-toolbar">
+								<div class="toolbar-inner tabbar">
+									<a class="tab-link"><i class="icon material-icons">rss_feed</i></a>
+									<a class="tab-link active">SafeGoma</a>
+									<a class="tab-link"><i class="icon material-icons">dashboard</i></a>
+								</div>
+							</div>
+								 
+   	 						<div class="page-content infinite-scroll" id="gdrMainPageContent">
+								<div class="tabs">	
+									<div class="tab active" id="gridletTab" style="height:500px;">
+									<!-- End do not modify section -->	
+										<!-- Your gridlet main view here --> 
+										<div id="startup" methods='{"init":"initDifferentCO2Popups","refresh":"initDifferentCO2Popups"}'></div>
+										<h5 style="text-align: center;">Status & Alert level</h5>
+										<div class="content-block">
+											<div style="text-align: center;font-size:20px;">
+												<i class="material-icons">tag_faces</i><br/>
+												Volcano : Pretty Good <div style="display:inline-block;height:15px;width:15px;border-radius: 15px;background:orange;" class="circlestatus"></div><br/>
+												CO2 concentration : Good <div style="display:inline-block;height:15px;width:15px;border-radius: 15px;background:green;" class="circlestatus"></div> <br/>
+												Earthquakes : Pretty Good <div style="display:inline-block;height:15px;width:15px;border-radius: 15px;background:orange;" class="circlestatus"></div> <br/>
+											</div>
+										</div>
+										
+										
+										<!--<div class="content-block">
+											<div class="content-block-inner">
+												<a href="#otherPage">Go to the other page <i class="material-icons">arrow_right</i></a>
+											</div>
+										</div>-->
+										
+										<div class="speed-dial">
+											<a href="#" class="floating-button">
+												<i class="icon material-icons">apps</i>
+												<i class="icon icon-close"></i>
+											</a>
+											<div class="speed-dial-buttons">
+												<a class="open-popup" data-popup="#sensorLocationPopup"><i class="icon material-icons">room</i></a>
+												<a class="open-popup" data-popup="#co2TalkToOVGPopup"><i class="icon material-icons">message</i></a>
+												<a class="open-popup" data-popup="#co2TrendsPopup"><i class="icon material-icons">graphic_eq</i></a>
+											</div>
+										</div>
+										
+										<div id="co2TalkToOVGPopup" class="popup">
+									      <div class="view navbar-fixed">
+									        <div class="pages">
+									          <div class="page">
+									            <div class="navbar">
+									              <div class="navbar-inner">
+									              	<div class="left"><a class="close-popup"><i class="icon icon-back"></i></a></div>
+									                <div class="center">Talk to OVG</div>
+									                <div class="right"><div style="display:none;" id="preloaderNewPassword" class="preloader color-white"> </div> </div>
+									              </div>
+									            </div>
+									            <div class="page-content messages-content">
+									             	<div class="messages messages-auto-layout">
+												      <div class="message message-sent message-with-avatar">
+												        <div class="message-text">Bonjour
+												          <div class="message-date">Feb 9, 12:58</div>
+												        </div>
+												        <div style="background-image:url(img/fille.1.jpg)" class="message-avatar"></div>
+												      </div>
+												      <div class="message message-sent message-with-avatar">
+												        <div class="message-text">En quoi pouvons-nous vous etre utile?
+												          <div class="message-date">Feb 9, 12:59</div>
+												        </div>
+												        <div style="background-image:url(img/fille.1.jpg)" class="message-avatar"></div>
+												      </div>
+												      <div class="message message-received message-with-avatar">
+												        <div class="message-name">Kate Johnson</div>
+												        <div class="message-text">J'aimerai avoir des informations sismologiques sur ma parcelle.
+												          <div class="message-date">Feb 9, 13:11</div>
+												        </div>
+												        <div style="background-image:url(img/fille.2.jpg)" class="message-avatar"></div>
+												      </div>
+												      <div class="message message-received message-with-avatar">
+												        <div class="message-name">Blue Ninja</div>
+												        <div class="message-text">En fait, je suis a Ndosho pres du monument 1
+												          <div class="message-date">Feb 9, 13:23</div>
+												        </div>
+												        <div style="background-image:url(img/fille.2.jpg)" class="message-avatar"></div>
+												      </div>
+												      <div class="message message-sent message-with-avatar">
+												        <div class="message-text">Merci de nous contacter pour cela
+												          <div class="message-date">Feb 9, 13:28</div>
+												        </div>
+												        <div style="background-image:url(img/fille.1.jpg)" class="message-avatar"></div>
+												      </div>
+												      <div class="message message-sent message-with-avatar">
+												        <div class="message-text">Pouvez-vous SVP passer a notre bureau afin de voir la carte sismologique de Goma et pour d'autres informations?
+												          <div class="message-date">Feb 9, 13:30</div>
+												        </div>
+												        <div style="background-image:url(img/fille.1.jpg)" class="message-avatar"></div>
+												      </div>
+												      <div class="message message-sent message-with-avatar">
+												        <div class="message-text">Nous en serons tres ravi
+												          <div class="message-date">Feb 11, 9:21</div>
+												        </div>
+												        <div style="background-image:url(img/fille.1.jpg)" class="message-avatar"></div>
+												      </div>
+												      <div class="message message-sent message-with-avatar">
+												        <div class="message-text">Alo...
+												          <div class="message-date">Feb 12, 19:55</div>
+												        </div>
+												        <div style="background-image:url(img/fille.1.jpg)" class="message-avatar"></div>
+												      </div>
+												      <div class="message message-sent message-with-avatar">
+												        <div class="message-text">Etes vous encore la?
+												          <div class="message-date">Feb 12, 20:07</div>
+												        </div>
+												        <div style="background-image:url(img/fille.1.jpg)" class="message-avatar"></div>
+												      </div>
+												      
+												    </div>
+												  </div>
+												  
+												  <div class="toolbar messagebar" style="background:white;">
+												    <div class="toolbar-inner">
+												    	<a href="#" id="gdGetUnSyncMsg" class="link icon-only"><i class="material-icons">sync</i></a>
+												      	<textarea id="gdMessageContent" placeholder="Your message"></textarea>
+												      	<a href="#" id="gdSendMessageBtn" class="link send-message">Send</a>
+												    </div>
+												  </div>
+												  
+									            </div>
+									          </div>
+									        </div>
+									      </div>
+									    </div>
+									    
+									    <div id="sensorLocationPopup" class="popup">
+									      <div class="view navbar-fixed">
+									        <div class="pages">
+									          <div class="page">
+									            <div class="navbar">
+									              <div class="navbar-inner">
+									              	<div class="left"><a class="close-popup"><i class="icon icon-back"></i></a></div>
+									                <div class="center">Sensor network node location</div>
+									                <div class="right"><div style="display:none;" id="preloaderNewPassword" class="preloader color-white"> </div> </div>
+									              </div>
+									            </div>
+									            <div class="page-content">
+									            	
+									            	<div id="googleMaps" style="width:100%;height:100%;border:1px solid #d7d7d7;">
+											
+													</div>
+									            	
+									            </div>
+									          </div>
+									        </div>
+									      </div>
+									    </div>
+									    
+									    <div id="co2TrendsPopup" class="popup">
+									      <div class="view navbar-fixed">
+									        <div class="pages">
+									          <div class="page">
+									            <div class="navbar">
+									              <div class="navbar-inner">
+									              	<div class="left"><a class="close-popup"><i class="icon icon-back"></i></a></div>
+									                <div class="center">CO2 Trends</div>
+									                <div class="right"><div style="display:none;" id="preloaderNewPassword" class="preloader color-white"> </div> </div>
+									              </div>
+									            </div>
+									            <div class="page-content">
+									             	<h5> CO2 Sensor trends <button id="refreshTrends" class="button button-fill" style="float:right;"><i class="material-icons">sync</i></button></h5>
+													<canvas id="sensorTrendZone" style="width:295px;height:350px;border:1px solid #d7d7d7;margin:10px;"> </canvas>
+													
+													<form class="list-block inputs-list">
+												      <ul>
+												        <li>
+												          <div class="item-content">
+												            <div class="item-media"><i class="icon material-icons">access_time</i></div>
+												            <div class="item-inner"> 
+												              <div class="item-title label">Period interval to display</div>
+												              <div class="item-input">
+												               	<select id="intervalPeriod">
+												               		  <option value="hour" selected="selected">Hour</option>
+														              <option value="minute">Minute</option>
+														              <option value="hour">Hour</option>
+														              <option value="day">Day</option>
+														              <option value="month">Month</option>
+														              <option value="year">Year</option>
+												               	</select>
+												              </div>
+												            </div>
+												          </div>
+												        </li>
+												       </ul>
+												     </form>
+												     
+													<p class="buttons-row">
+														<button class="button" id="ligneDisplay">Ligne</button>
+														<button class="button" id="histogrammeDisplay">Histogramme</button>
+														<button class="button" id="sectorDisplay">Sector</button>
+													</p>
+									            </div>
+									          </div>
+									        </div>
+									      </div>
+									    </div>
+									    
+										
+										<!-- End of your gridlet main view -->
+									</div>
+								</div>
+   	 						</div>
+   	 					</div>
+   	 					
+   	 				</div>
+   	 			</div>
+			</div>
+			<script type="text/javascript" src="lib/framework7/framework7.min.js"></script>
+			<script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
+            <script type="text/javascript" src="lib/gdr.1.0.0.js"></script>
+			<script type="text/javascript" src="lib/Chart.js/Chart.min.js"></script>
+			<script type="text/javascript" src="lib/Chart.js/utils.js"></script>
+			<script type="text/javascript" src="javascript.js"></script>
+		</body>
+	</html>

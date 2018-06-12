@@ -1,0 +1,83 @@
+.gdr-first-toolbar {
+	position: relative !important;
+	top: 0cm !important;
+}
+
+.gdrWhiteToolbar {
+	background: #FFFFFF;
+	color: #409688;
+}
+
+.gdrWhiteToolbar a.tab-link, .gdrWhiteToolbar a.tab-link.active {
+	background: white;
+	color: #409688;
+	box-shadow: 0px 0px 0px none;
+}
+
+.zeroMarginToolbar {
+	position: relative;
+	top: 0cm;
+}
+
+/*
+ #gdrMainToolbar.tabbar-scrollable a.link,#gdrMainToolbar.tabbar-scrollable a.tab-link{
+ padding: 0 16px;/*!important;* /
+ }
+ */
+
+.gdrbdcstdate {
+	font-size: 10px;
+}
+
+#gdrBluetoothDevicesList {
+
+}
+
+#gdrBluetoothDevicesList .item-after .gdrDeviceHasGdr {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	background: #3196f3;
+}
+
+.gdrPulseAnimation {
+	-webkit-animation-name: gdrPulseAnimation;
+	-webkit-animation-iteration-count: 15;
+	-webkit-animation-duration: 2s;
+	text-shadow: none;
+}
+
+
+@keyframes gdrPulseAnimation{
+	25%{
+		background:#FFFFFF;
+		color:#409688;
+	}
+	50%{
+		background:#409688;
+		color:#FFFFFF;
+	}
+	75%{
+		background:#409688;
+		color:#FFFFFF;
+	}
+	100%{
+		background:#FFFFFF;
+		color:#409688;
+	};
+};
+
+.gdr-search-in-page{
+	display:none;
+}
+
+.notificationSymbole{
+	position:absolute;
+	top:10px;
+	right:10px;
+	width:5px;
+	height:5px;
+	border-radius:5px;
+	background:red;
+}
