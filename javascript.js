@@ -69,6 +69,8 @@ function loadGoogleMaps(googleMapsDomId,centerCoord,callback){
 		if(typeof callback == "function") callback(googleMapsObj);
 	}else{
 		$.getScript("http://maps.google.com/maps/api/js?key=AIzaSyBukURmSP_A3FRx_x9-HphIxeGOJn5KsWo", function () {
+			
+			
 			centerCoord.lat = centerCoord.lat ? centerCoord.lat : 0.0;
 			centerCoord.lng = centerCoord.lng ? centerCoord.lng : 0.0;
 			
@@ -116,6 +118,10 @@ function presentCoordinatesOnMaps(coordinates,mapsObj,callback){
 	}
 	if(typeof callback == "function") callback();
 }
+
+$(function(){
+	initDifferentCO2Popups();
+});
 
 function initDifferentCO2Popups(){
 	
